@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  gap: 1rem;
+  box-shadow: 0 0 15px #ccc;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.alert {
+  padding: 0.5rem;
+  color: white;
+  background-color: crimson;
+}
+
+.text-alert {
+  color: crimson;
+}
+
+/* section */
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 0.5rem;
+  margin: 0 auto 1rem;
+}
+
+section > article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: -2px 5px 10px rgb(0 0 0 / 20%);
+  transition: background-color 0.4s ease;
+}
+section > article > a {
+  padding: 0.5rem;
+  display: block;
+  background-color: var(--primary);
+  color: var(--primary-text-color);
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+section > article > a::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+}
+section > article:hover {
+  background-color: var(--primary);
+}
+section > article:hover > a {
+  color: var(--primary);
+  background-color: var(--primary-text-color);
+}
